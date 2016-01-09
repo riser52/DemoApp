@@ -1,20 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="demoApp">
 	<head>
 		<meta charset="utf-8">
 	
     	<script src="assets/libs/js/jquery-2.1.4.js"> </script>
-		<script src="assets/libs/js/underscore.js"></script>
-    	<script src="assets/libs/js/backbone.js"></script>
+    	<script src="assets/libs/js/angular.min.js"></script>
+		<!-- <script src="assets/libs/js/underscore.js"></script>
+    	<script src="assets/libs/js/backbone.js"></script> -->
     	<script src="assets/libs/js/tether.min.js"></script>
     	<script src="assets/libs/js/bootstrap.min.js"></script>
+    	<script src="assets/js/app.js"></script>
+    	
     
     	<link rel="stylesheet" type="text/css" href="assets/libs/css/bootstrap.min.css">
+    	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
 	</head>
 
-	<body>
-		<h1>Hello all..!</h1>
+	<body ng-controller="mainCtrl">
+	<div class="exdiv">
+	<button type="button" class="col-xs-offset-3 circle btn btn-danger-outline">Danger</button>
+	<br/>
+	<button type="button" class="col-xs-offset-2 circle btn btn-danger-outline" style="margin-left:270px;margin-right:5px;">Danger</button>
+	<button type="button" class="circle btn btn-danger-outline">Danger</button>
+	<br/>
+	<button type="button" class="circle btn btn-danger-outline">Danger</button>
+	<button type="button" class="circle btn btn-danger-outline">Danger</button>
+	<button type="button" class="circle btn btn-danger-outline">Danger</button>
+	<br/>
+	<button type="button" class="circle btn btn-danger-outline">Danger</button>
+	<button type="button" class="circle btn btn-danger-outline">Danger</button>
+	</div>
+		<!-- <h1>Hello all..!</h1>
 			<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-			<button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button>
+			<button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button> -->
+			
+
 	</body>
 </html>
