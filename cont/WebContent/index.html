@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" id="_app" data-framework="angularjs">
+	<head>
+		<title>PBW</title>
+		<meta charset="utf-8">
+	    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE, NO-STORE, MAX-AGE=0">
+		
+		<!--[if IE < 10]>
+			<meta http-equiv="refresh" content="0;url=browser_requirement.html"/>
+		<![endif]-->
+		
+		<!-- link rel="icon" href="favicon.ico" type="image/x-icon" / -->
+	    <link type="text/css" href="assets/css/index.css" rel="stylesheet">
+	    
+	</head>
+	<body style="font-family: {{fontFamily}}; font-size: {{fontSize}}px">
+	
+	<div id="app_wrapper" class="app-sidebar-fixed app-sidebar-closed"> 
+		<div class="sidebar pull-left" id="sidebar">
+			<!-- start: MAIN NAVIGATION MENU -->
+			<nav class="navigation-links" app-navigation></nav>
+			<!-- end: MAIN NAVIGATION MENU -->
+		</div>
+		<header id="header" app-header class="navbar navbar-default navbar-fixed-top hidden-print"><!-- start: TOP NAVBAR -->
+			<!-- end: NAVBAR COLLAPSE -->
+			<!-- start: TOP NAVBAR -->
+		</header><!-- End header -->
+		
+		<div inform class="inform-shadow inform-animate inform-fixed"></div>
+		
+		<div class="container hide" ng-class="{'hide': !showNoAccess, 'show': showNoAccess===true}">
+			<div class="alert alert-danger" role="alert" style="width: 80%; margin: 5% auto;">
+			  <span class="sr-only">Error:</span>
+			  <h2><span class="fa fa-exclamation-triangle" aria-hidden="true"></span> No Access!</h2>
+			  <h4>Sorry you do not have access to this section of application</h4> 
+			</div>
+		</div>
+		
+		<div class="page-mask text-center text-muted nga-fast nga-stagger nga-fade" ng-if="showLoading===true">
+			<div class="ui-loader"></div>
+		</div>
+		
+		<main id="main" ng-view>
+			
+		</main>
+		
+		<footer app-footer></footer>
+	</div>	
+	
+	<script data-main="assets/js/main" src="assets/js/vendor/require/require.js"></script>
+
+	</body>
+</html>

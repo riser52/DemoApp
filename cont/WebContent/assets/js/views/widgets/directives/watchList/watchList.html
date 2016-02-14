@@ -1,0 +1,17 @@
+<style>
+.wgt-watchList .ui-grid-row .ui-grid-cell:last-child .ui-grid-cell-contents, .ui-grid .ui-grid-header-cell:last-child .ui-grid-cell-contents {
+    padding-right: 25px !important;
+}
+</style>
+<div class="widget-content">
+	<h4 class="widget-title">
+		<span class="pull-right">
+			<a href="javascript:;"><i class="fa fa-gear" title="Edit Settings"></i></a>
+			<a href="javascript:;"><i class="glyphicon glyphicon-fullscreen" title="Maximize View"></i></a>
+		</span>
+		<i class="fa fa-list text-info"></i> Watch List
+	</h4>
+	<div class="widget-inner">
+		<div ng-if="gridOptions" ui-grid="gridOptions" class="gridStyle"></div>
+	</div>
+</div>

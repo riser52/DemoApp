@@ -1,0 +1,22 @@
+<style>
+	.locates .ui-grid-viewport{
+		min-height: 182px !important;
+		overflow-x: hidden !important;
+	}
+	.locates .widget-content{
+		position: relative;
+		min-height: 312px;
+	}
+</style>
+<div class="widget-content">
+	<h4 class="widget-title">
+		<span class="pull-right">
+			<a href="javascript:;"><i class="fa fa-gear" title="Edit Settings"></i></a>
+			<a href="javascript:;"><i class="glyphicon glyphicon-fullscreen" title="Maximize View"></i></a>
+		</span>
+		<i class="fa fa-bell text-primary fa-lg"></i> Locates
+	</h4>
+	<div class="widget-inner">
+		<div ng-if="gridOptions" ui-grid="gridOptions" class="gridStyle"></div>
+	</div>
+</div>

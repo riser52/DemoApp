@@ -1,0 +1,102 @@
+<div class="widget-content">
+
+<style>
+
+    .revenueSummary .rev-table {
+        margin: 0;
+    }
+
+    .revenueSummary table.rev-table>tbody>tr>td {
+        border-top: 0px solid #ddd;
+    }
+
+    .revenueSummary .rev-table .lab {
+
+    }
+
+    .revenueSummary .rev-table .val {
+
+    }
+
+    .revenueSummary .red-arrow {
+        color: red;
+    }
+    .revenueSummary .green-arrow {
+        color: green;
+    }
+
+    .revenueSummary .rev-div .progress {
+        height:5px;
+        margin:0;
+    }
+    .revenueSummary .balance-container {
+        height: 50px;
+    }
+
+    .revenueSummary .balance-container .balance-box {
+        float: left;
+        width: 20%;
+        padding: 0 5px 0 5px;
+    }
+
+    .revenueSummary .balance-container dl {
+        /*border: 1px solid gainsboro;*/
+        box-shadow: 0px 1px 1px #A5A5A5;
+        margin-bottom: 10px;
+    }
+
+    .revenueSummary .balance-container dt {
+        padding:4px;
+        background-color: whitesmoke;
+        border-bottom: 1px solid #CCCCCC;
+    }
+
+    .revenueSummary .balance-container dd {
+        padding:4px;
+        background-color: whitesmoke;
+    }
+
+    .revenueSummary .rev-tabs .nav>li>a {
+        padding: 7px 15px 8px;
+    }
+
+    .revenueSummary .bold-black {
+        color: black !important;
+        font-weight: bold;;
+    }
+
+    .revenueSummary .option-container {
+        padding: 0;
+        margin: 0 4px 0 0;
+        float: right;
+    }
+
+    .revenueSummary .option-container select {
+        padding: 4px 0;
+        height: inherit;
+        font-size: inherit;
+    }
+
+</style>
+
+    <h4 class="widget-title">
+    	<span class="pull-right">
+			<a href="javascript:;"><i class="fa fa-gear" title="Edit Settings"></i></a>
+			<a href="javascript:;"><i class="glyphicon glyphicon-fullscreen" title="Maximize View"></i></a>
+		</span>
+    	<i class="fa fa-table Hard"></i> Revenue Summary
+    </h4>
+    <div class="widget-inner">
+
+	    <div class="option-container" style="margin-top:5px;">
+	        <select class="form-control" ng-model="measure" ng-options="m.label for m in measures"></select>
+	    </div>
+		<div class="clearfix"></div>
+
+        <div ng-if="gridOptions" ui-grid="gridOptions" class="gridStyle" style="height:241px;"></div>
+	
+	    <div class="col-xs-12  col-sm-12">
+
+	    </div>
+	</div>
+</div>

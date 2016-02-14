@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Open_Sans/OpenSans-Regular.eot);
+  src: local('Open Sans'), local('OpenSans'), url(../fonts/Open_Sans/OpenSans-Regular.eot) format('embedded-opentype'), url(../fonts/Open_Sans/OpenSans-Regular.woff) format('woff'), url('../fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url(../fonts/Open_Sans/OpenSans-Semibold.eot);
+  src: local('Open Sans'), local('OpenSans'), url(../fonts/Open_Sans/OpenSans-Semibold.eot) format('embedded-opentype'), url(../fonts/Open_Sans/OpenSans-Semibold.woff) format('woff'), url('../fonts/Open_Sans/OpenSans-Semibold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/Open_Sans/OpenSans-Bold.eot);
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(../fonts/Open_Sans/OpenSans-Bold.eot) format('embedded-opentype'), url(../fonts/Open_Sans/OpenSans-Bold.woff) format('woff'), url('../fonts/Open_Sans/OpenSans-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Roboto/Roboto-Regular.eot);
+  src: local('Roboto'), local('Roboto'), url(../fonts/Roboto/Roboto-Regular.eot) format('embedded-opentype'), url(../fonts/Roboto/Roboto-Regular.woff) format('woff'), url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Droid Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Droid_Sans/DroidSans.eot);
+  src: local('Droid Sans'), local('DroidSans'), url(../fonts/Droid_Sans/DroidSans.eot) format('embedded-opentype'), url(../fonts/Droid_Sans/DroidSans.woff) format('woff'), url('../fonts/Droid_Sans/DroidSans.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Lato/Lato-Regular.eot);
+  src: local('Lato'), url('../fonts/Lato/Lato-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Montserrat/Montserrat-Regular.eot);
+  src: local('Montserrat'), url(../fonts/Montserrat/Montserrat-Regular.eot) format('embedded-opentype'), url(../fonts/Montserrat/Montserrat-Regular.woff) format('woff'), url('../fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+}

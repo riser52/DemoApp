@@ -1,0 +1,22 @@
+<div class="" dropdown style="margin-right: 10px;width:150px;" on-toggle="showHideDropdown(open)" auto-close="outsideClick">
+	<button type="button" class="multiselect btn btn-default {{buttonClass}}" dropdown-toggle="" title="{{buttonTitle()}}" style="width:{{buttonWidth}}">
+		<span class="multiselect-selected-text">
+			<strong>{{buttonDisplayText}}:</strong>
+			<small ng-show="selectAllChk===true" class="">(all)</small>
+			<span class="" ng-show="selectAllChk===false">{{buttonText()}}</span>
+			&nbsp;&nbsp;<b class="caret"></b>
+		</span>
+	</button>
+	<ul class="dropdown-menu multiselect-container" style="width:{{dropdownWidth}}">
+		<li class="multiselect-item multiselect-all">
+			<label class="checkbox">
+				<input type="checkbox" ng-model="selectAllChk" ng-change="toggleSelectAll()">  Select all
+			</label>
+		</li>
+		<li ng-repeat="(key, opt) in options" ng-init="checkSelected(opt);">
+			<label class="checkbox" title="{{opt.label}}" >
+				<input type="checkbox" ng-model="opt.selected" ng-change="toggleSelect(opt)"> {{opt.label}}
+			</label>
+		</li>
+	</ul>
+</div>

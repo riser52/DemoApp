@@ -1,0 +1,50 @@
+<div class="">
+<div class="filter-section">
+<div class="container-fluid">
+<div class="col-md-3" ng-show="pageParams.view=='client'">
+							<div class="form-group">
+								<label>As Of Date:</label>&nbsp;
+								<span class="pull-right btn-group" role="group" style="padding-bottom:3px;margin-top:-5px;">
+								  <button type="button" class="btn btn-xs btn-default pmtd">Prior MTD</button>
+								  <button type="button" class="btn btn-xs btn-default mtd">MTD</button>
+								  <button type="button" class="btn btn-xs btn-default ytd">YTD</button>
+								  <button type="button" class="btn btn-xs btn-default today">Today</button>
+								</span>
+								<br>
+			
+	<div class="input-group col-md-6 pull-left" style="text-align:left;">From:</div>
+	<div class="input-group col-md-6 pull-right" style="text-align:left;">To:</div>
+    <div class="input-group col-md-6 pull-left">
+    
+      <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt1" is-open="popup1.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" ng-focus="open1()" show-button-bar="false" close-text="Close" show-weeks="false"/>
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+	</div>
+	 <div class="input-group col-md-6 pull-right">
+	 
+      <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt2" is-open="popup2.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" ng-focus="open2()" show-button-bar="false" close-text="Close" show-weeks="false" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+    </div>      
+
+								<!-- 	<div class="input-daterange input-group" id="datepicker">
+									<span class="input-group-addon">From: </span>
+									<input type="text" class="input-sm form-control" id="min" name="min" value="{{minDate}}"/>
+									<span class="input-group-addon fa fa-calendar hand pbw-input-calendar" id="min-icon"></span> 
+									<span class="input-group-addon"> To: </span>
+									<input type="text" class="input-sm form-control" id="max" name="max" value="{{maxDate}}"/>
+									<span class="input-group-addon fa fa-calendar hand pbw-input-calendar" id="max-icon"></span>
+								</div> -->
+							</div>
+	
+						</div>	
+						</div>
+
+</div>
+<div class="col-xs-12">		
+	<div ng-if="gridOptions" ui-grid="gridOptions" class="gridStyle"></div>
+ <!-- 	<div ui-grid="gridOptions" class="ag-blue" style="height: 500px;"></div> -->
+</div>
+</div>

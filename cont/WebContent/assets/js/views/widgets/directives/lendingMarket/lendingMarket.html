@@ -1,0 +1,43 @@
+<style>
+	.lendingMarket .widget-content{
+		min-height: 320px;
+	}
+    .lendingMarket .red-arrow {
+        color: red;
+    }
+    .lendingMarket .green-arrow {
+        color: green;
+    }
+    .lendingMarket .ui-grid .ui-grid-header-cell{
+    padding: 3px !important;
+    }
+     .lendingMarket .ui-grid-cell-contents{
+    padding-left: 5px !important;
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
+    padding-right: 0px !important;
+    }
+   
+</style>
+
+<div class="widget-content">
+	<!-- Your code goes here -->
+	<h4 class="widget-title">
+		<span class="pull-right">
+			<a href="javascript:;"><i class="fa fa-gear" title="Edit Settings"></i></a>
+			<a href="javascript:;"><i class="glyphicon glyphicon-fullscreen" title="Maximize View"></i></a>
+		</span>
+		<i class="fa fa-tasks text-primary"></i> Lending Market
+	</h4>
+	<div class="widget-inner">
+	    <div style="width:100%;height:50%;padding: 4px 0 0;">
+	        <div class="text-center text-muted bold"><div style="font-size:12px;margin-top:3px;text-align:center;">Easing</div></div>
+	        <div ng-if="gridOptions" ui-grid="gridOptions" class="gridStyle" style="height:130px;"></div>
+	    </div>
+	    <div style="width:100%;height:50%;padding: 4px 0 0;">
+	        <div class="text-center text-muted bold"><div style="font-size:12px;margin-top:3px;text-align:center;">Tightening</div></div>
+	        <div ng-if="gridOptions" ui-grid="gridOptions" class="gridStyle" style="height:130px;"></div>
+	    </div>
+	    
+    </div>
+</div>

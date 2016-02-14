@@ -1,0 +1,154 @@
+<style>
+	.alerts .widget-content{
+		background-color: transparent;
+	}
+	.alerts .widget-title{
+		/*border-width: 0;*/
+		/*background-color: #eee;*/
+	}
+	.alerts .list-group-item{
+		border-radius: 0;
+		border-width: 1px 0 0 0;
+		font-weight: bold;
+		padding: 0;
+		background-color: transparent;
+	}
+	.alerts .list-group-item:first-child{
+		border-width: 0;
+	}
+	.alerts .list-group-item a{
+		padding: 10px 5px;
+		display: block;
+	}
+	.alerts .list-group-item a:hover{
+		background-color: #f5f5f5;
+	}
+	.alerts .list-group-item .text{
+		text-transform: capitalize;
+		text-decoration: none;
+		color: #000;
+	}
+	.alerts .value{
+		padding-top:3px;
+	}
+</style>
+<div class="widget-content">
+	<h4 class="widget-title" ng-style="collapseview && {'border-bottom': 'none'}">
+		<span class="pull-right">
+			<a href="javascript:;"><i ng-if="!collapseview" class="fa fa-gear" title="Edit Settings"></i></a>
+			<a href="javascript:;"><i ng-if="!collapseview" class="glyphicon glyphicon-fullscreen" title="Maximize View"></i></a>
+		</span>
+		<span class="pull-left">
+			<a href="javascript:;" ng-click="collapseview = false"><i ng-if="collapseview" class="fa fa-caret-right" title="Click to expand"></i></a>
+			<a href="javascript:;" ng-click="collapseview = true"><i ng-if="!collapseview" class="fa fa-caret-down" title="Click to collapse"></i></a>
+		</span>
+		<i ng-if="!collapseview" class="fa fa-bell text-danger"></i> Alerts
+	</h4>
+<!-- 	<div class="widget-inner"> -->
+		<ul class="list-group" style="width: 100%;" ng-show="!collapseview">
+			<li class="list-group-item" style="border-radius: 0">
+				<a href="javascript:;"><div class="text pull-left">positions missing rules</div>
+				<div class="value text-right">{{list.missingPositions}}</div></a>
+			</li> 
+			<li class="list-group-item">
+				<a href="javascript:;"><div class="text pull-left">Trade breaks</div>
+				<div class="value text-right">{{list.tradeBreaks}}</div></a>
+			</li>
+			<li class="list-group-item">
+				<a href="javascript:;"><div class="text pull-left">Watch list alerts</div>
+				<div class="value text-right">{{list.watchListAlerts}}</div></a>
+			</li>
+			<li class="list-group-item">
+				<a href="javascript:;"><div class="text pull-left">Rate Alerts </div>
+				<div class="value text-right">{{list.rateAlerts}}</div></a>
+			</li>
+			<li class="list-group-item">
+				<a href="javascript:;"><div class="text pull-left">Total Revenue Opp. </div>
+				<div class="value text-right">{{list.revenueOpportunity| notationalDecimal:"$":0}}</div></a>
+			</li>
+			<li class="list-group-item">
+				<a href="javascript:;"><div class="text pull-left">New shorts </div>
+				<div class="value text-right">{{list.newShorts}}</div></a>
+			</li>
+			<li class="list-group-item">
+				<a href="javascript:;"><div class="text pull-left">New Longs </div>
+				<div class="value text-right">{{list.newLongs}}</div></a>
+			</li>
+			<li class="list-group-item">
+				<a href="javascript:;"><div class="text pull-left">Cash Wires in </div>
+				<div class="value text-right">{{list.cashWiresIn}}</div></a>
+			</li>
+			<li class="list-group-item">
+				<a href="javascript:;"><div class="text pull-left">Cash Wires out </div>
+				<div class="value text-right">{{list.cashWiresOut}}</div></a>
+			</li>
+			<li class="list-group-item">
+				<a href="javascript:;"><div class="text pull-left">Supply (Tightening)</div>
+				<div class="value text-right">{{list.supplyTightening}}</div></a>
+			</li>
+			<li class="list-group-item">
+				<a href="javascript:;"><div class="text pull-left">Supply (Easing) </div>
+				<div class="value text-right">{{list.supplyEasing}}</div></a>
+			</li>
+			<li class="list-group-item"  style="border-radius: 0">
+				<a href="javascript:;"><div class="text pull-left">Pending Locates</div>
+				<div class="value text-right">{{list.locatesNeedAction}}</div></a>
+			</li>
+		</ul>
+<!-- 	</div>	 -->
+<!-- 	<div class="container-fluid" style="width: 100%;"> -->
+<!-- 	<div class="row"> -->
+<!-- 		<div class="col-xs-6 col-sm-3 col-md-2 alert-item"> -->
+<!-- 			<div class="value fa-lg"><a href="javascript:;">{{list.missingPositions}}</a></div> -->
+<!-- 			<div class="text">positions missing rules</div> -->
+<!-- 		</div>  -->
+<!-- 		<div class="col-xs-6 col-sm-3 col-md-2 alert-item"> -->
+<!-- 			<div class="value fa-lg"><a href="javascript:;">{{list.tradeBreaks}}</a></div> -->
+<!-- 			<div class="text">Trade breaks</div> -->
+<!-- 		</div> -->
+<!-- 		<div class="col-xs-6 col-sm-3 col-md-2 alert-item"> -->
+<!-- 			<div class="value fa-lg"><a href="javascript:;">{{list.watchListAlerts}}</a></div> -->
+<!-- 			<div class="text">Watch list alerts</div> -->
+<!-- 		</div> -->
+<!-- 		<div class="col-xs-6 col-sm-3 col-md-2 alert-item"> -->
+<!-- 			<div class="value fa-lg"><a href="javascript:;">{{list.rateAlerts}}</a></div> -->
+<!-- 			<div class="text">Rate Alerts </div> -->
+<!-- 		</div> -->
+<!-- 		<div class="col-xs-6 col-sm-3 col-md-2 alert-item"> -->
+<!-- 			<div class="value fa-lg"><a href="javascript:;">{{list.revenueOpportunity| notationalDecimal:"$":0}}</a></div> -->
+<!-- 			<div class="text">Total Revenue Opportunity </div> -->
+<!-- 		</div> -->
+<!-- 		<div class="col-xs-6 col-sm-3 col-md-2 alert-item"> -->
+<!-- 			<div class="value fa-lg"><a href="javascript:;">{{list.newShorts}}</a></div> -->
+<!-- 			<div class="text">New shorts </div> -->
+<!-- 		</div> -->
+<!-- 	</div> -->
+<!-- 	<div class="row"> -->
+<!-- 		<div class="col-xs-6 col-sm-3 col-md-2 alert-item"> -->
+<!-- 			<div class="value fa-lg"><a href="javascript:;">{{list.newLongs}}</a></div> -->
+<!-- 			<div class="text">New Longs </div> -->
+<!-- 		</div> -->
+<!-- 		<div class="col-xs-6 col-sm-3 col-md-2 alert-item"> -->
+<!-- 			<div class="value fa-lg"><a href="javascript:;">{{list.cashWiresIn}}</a></div> -->
+<!-- 			<div class="text">Cash Wires in </div> -->
+<!-- 		</div> -->
+<!-- 		<div class="col-xs-6 col-sm-3 col-md-2 alert-item"> -->
+<!-- 			<div class="value fa-lg"><a href="javascript:;">{{list.cashWiresOut}}</a></div> -->
+<!-- 			<div class="text">Cash Wires out </div> -->
+<!-- 		</div> -->
+<!-- 		<div class="col-xs-6 col-sm-3 col-md-2 alert-item" title="Number of securities my clients holds where supply is tightening"> -->
+<!-- 			<div class="value fa-lg"><a href="javascript:;">{{list.supplyTightening}}</a></div> -->
+<!-- 			<div class="text">Supply (Tightening)</div> -->
+<!-- 		</div> -->
+<!-- 		<div class="col-xs-6 col-sm-3 col-md-2 alert-item"> -->
+<!-- 			<div class="value fa-lg"><a href="javascript:;">{{list.supplyEasing}}</a></div> -->
+<!-- 			<div class="text">Supply (Easing) </div> -->
+<!-- 		</div> -->
+<!-- 		<div class="col-xs-6 col-sm-3 col-md-2 alert-item"> -->
+<!-- 			<div class="value fa-lg"><a href="javascript:;">{{list.locatesNeedAction}}</a></div> -->
+<!-- 			<div class="text">Pending Locates</div> -->
+<!-- 		</div> -->
+<!-- 		<div class="clearfix"></div> -->
+<!-- 	</div> -->
+<!-- 	</div> -->
+</div>
